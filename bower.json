@@ -1,0 +1,24 @@
+{
+  "name": "start",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mehemmed Memmedli"
+  ],
+  "license": "ISC",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "asset/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "bootstrap": "^4.1.0",
+    "jquery": "^3.3.1",
+    "owl.carousel": "^2.3.4"
+  }
+}

@@ -1,0 +1,104 @@
+
+//MEDIA QUERY MANAGER
+/*
+-sm
+-m
+-lg
+-xl
+
+*/
+
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+@mixin absCenter{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+}
+
+
+@mixin respondmin($breakpoint){
+	@if $breakpoint == sm {
+		@media (min-width: 576px) {@content};
+	}
+
+	@if $breakpoint == md {
+		@media (min-width: 768px) {@content};
+	}
+
+	@if $breakpoint == lg {
+		@media (min-width: 992px) {@content};
+	}
+
+	@if $breakpoint == xl {
+		@media (min-width: 1200px) {@content};
+	}
+
+	
+}
+
+
+@mixin respondmax($breakpoint){
+	@if $breakpoint == sm {
+		@media (max-width: 575px) {@content};
+	}
+
+	@if $breakpoint == md {
+		@media (max-width: 767px) {@content};
+	}
+
+	@if $breakpoint == md789 {
+		@media (max-width: 789px) {@content};
+	}
+
+	@if $breakpoint == lg {
+		@media (max-width: 991px) {@content};
+	}
+
+	@if $breakpoint == xl {
+		@media (max-width: 1199px) {@content};
+	}
+	
+
+	@if $breakpoint == xl1209 {
+		@media (max-width: 1209px) {@content};
+	}
+
+	@if $breakpoint == xl1260 {
+		@media (max-width: 1260px) {@content};
+	}
+
+	@if $breakpoint == xl1436 {
+		@media (max-width: 1436px) {@content};
+	}
+}
+
+
+
+
+@mixin font($ff: false, $s: false, $c: false,  $lh: false, $w: false) {
+
+	@if $ff {  font-family: $ff, Helvetica, Arial, sans-serif;}
+	@if $s { font-size: $s; }
+	@if $c { color: $c; }
+	@if $lh { line-height: $lh; }
+	@if $w { font-weight: $w; }
+}
+
+@mixin font-family($font) {
+	font-family: $font;
+	src: url('../../fonts/#{$font}.eot');
+	src: url('../../fonts/#{$font}.eot?#iefix') format('embedded-opentype'),
+	url('../../fonts/#{$font}.woff2') format('woff2'),
+	url('../../fonts/#{$font}.woff') format('woff'),
+	url('../../fonts/#{$font}.ttf') format('truetype'),
+	url('../../fonts/#{$font}.svg##{$font}') format('svg');
+}
