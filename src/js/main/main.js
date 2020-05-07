@@ -76,7 +76,10 @@ $(document).ready(function () {
     })
 
 
-    $(".owl-stage-outer").mCustomScrollbar();
+    $('body').overlayScrollbars({});
+
+
+    $('.myOwl .owl-stage-outer').overlayScrollbars({});
 
 })
 
