@@ -28,9 +28,9 @@ function init() {
 
     myMap.behaviors.disable('scrollZoom');
 
-    myPlacemark2.balloon.open();
+    // myPlacemark2.balloon.open();
 
-    myPlacemark.balloon.open();
+    // myPlacemark.balloon.open();
 
 
 
